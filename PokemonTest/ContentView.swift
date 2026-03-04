@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var vm: PokemonViewModel
+    
+    init() {
+        let service = PokemonService(baseUrl: URL(string: "https://pokeapi.co/api/v2/")!)
+        _vm = StateObject(wrappedValue: PokemonViewModel(pokemonService: service))
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if let pokemon = vm.pokemon {
+                Text("Who's this pokemon?")
+                    .font(.headline)
+                Text("Pokemon name: \(pokemon.name)")
+            }
         }
         .padding()
+        .task {
+            await vm.fetchPokemon(id: 1)
+        }
     }
-}
-
-#Preview {
-    ContentView()
 }
