@@ -21,6 +21,16 @@
 		4E43B0282F584F15006A9076 /* PokemonTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4E18AA372F5B54040072B700 /* Exceptions for "PokemonTestTests" folder in "PokemonTestTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4E43B0272F584F15006A9076 /* PokemonTestTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4E43B0102F584A58006A9076 /* PokemonTest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -29,6 +39,9 @@
 		};
 		4E43B0292F584F15006A9076 /* PokemonTestTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4E18AA372F5B54040072B700 /* Exceptions for "PokemonTestTests" folder in "PokemonTestTests" target */,
+			);
 			path = PokemonTestTests;
 			sourceTree = "<group>";
 		};
@@ -393,6 +406,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3YGP7G4NST;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemonTestTests/Info.plist;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.breno.PokemonTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +429,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3YGP7G4NST;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PokemonTestTests/Info.plist;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.breno.PokemonTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
