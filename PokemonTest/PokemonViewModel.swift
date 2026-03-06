@@ -11,6 +11,7 @@ import Combine
 final class PokemonViewModel: ObservableObject {
     
     @Published var pokemon: Pokemon? = nil
+    @Published var pokemonId: String = ""
     
     private let pokemonService: any PokemonServiceProtocol
     
