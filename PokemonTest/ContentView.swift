@@ -29,7 +29,6 @@ struct ContentView: View {
             } label: {
                 Text("Search Pokemon")
             }
-
             
             if let pokemon = vm.pokemon {
                 Text("Who's this pokemon?")
