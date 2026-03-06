@@ -17,16 +17,28 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 10) {
+            TextField("Type the id of a pokemon.", text: $vm.pokemonId)
+            
+            Button {
+                Task {
+                    if let id = Int(vm.pokemonId) {
+                        await vm.fetchPokemon(id: id)
+                    }
+                }
+            } label: {
+                Text("Search Pokemon")
+            }
+
+            
             if let pokemon = vm.pokemon {
                 Text("Who's this pokemon?")
                     .font(.headline)
                 Text("Pokemon name: \(pokemon.name)")
             }
+            
+            Spacer()
         }
         .padding()
-        .task {
-            await vm.fetchPokemon(id: 1)
-        }
     }
 }
